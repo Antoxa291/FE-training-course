@@ -1,0 +1,173 @@
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: "Segoe UI", "Roboto", arial, sans-serif;
+  text-shadow: rgba(255, 255, 255, 0.4) 0 1px;
+  overflow: scroll;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  justify-content: flex-end;
+  align-items: center;
+
+  /* Поля вокруг текста */
+
+  position: fixed;
+  /* Фиксированное положение */
+  right: 8px;
+  /* Расстояние от правого края окна браузера */
+  top: 5px;
+  /* Расстояние сверху */
+  /* position: absolute; */
+  font-size: 13px;
+  text-decoration: none;
+  padding: 10px;
+}
+
+#menu_open,
+#menu_show,
+#menu_hide {
+  display: none;
+}
+
+
+nav img,
+div {
+  padding: 5px;
+}
+
+.onfocus:hover {
+  color: rgb(51, 51, 51);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+.other:hover {
+  background-image: url(/img/bg-grey.png);
+  background-size: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50% 50% 50% 50%;
+  cursor: pointer;
+}
+
+.apps {
+  display: block;
+  /* Блочный элемент (для старых браузеров) */
+  text-align: center;
+  /* Выравнивание по центру */
+
+}
+
+.submenu {
+  width: 250px;
+  height: 320px;
+  display: none;
+  justify-content: center;
+  flex-flow: wrap row;
+  padding-top: 10px;
+  padding-bottom: 0px;
+  /* Фиксированное положение */
+  right: 10px;
+  /* Расстояние от правого края окна браузера */
+  top: 50px;
+  /* Расстояние сверху */
+  position: absolute;
+  background-color: #ffffff;
+  /* border-radius: 20px 20px 20px 20px; */
+
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+  overflow-x: hidden;
+}
+
+#menu_open:checked~div.submenu {
+  display: flex;
+}
+
+.submenu-item {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap row;
+  padding-bottom: 0px;
+
+
+
+}
+
+.submenu-item-btn {
+  background-color: rgb(102, 102, 102);
+
+  width: 100%;
+  color: #ffffff;
+  cursor: pointer;
+  width: 240px;
+}
+
+.submenu-item-more {
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  flex-flow: wrap row;
+  padding-top: 10px;
+  padding-bottom: 0px;
+  border-top: 1px #000000;
+
+}
+
+.submenu-item-icon {
+  display: flex;
+}
+
+#menu_show:checked~div.submenu-item-more {
+  display: flex;
+}
+
+#menu_show:checked~div.submenu-item-btn {
+  opacity: 0;
+}
+
+.submenu-item-more-btn {
+  opacity: 0;
+}
+
+#menu_hide:checked~div.submenu-item-more-btn {
+  opacity: 100;
+}
+
+.submenu-item-icon {
+  display: flex;
+  flex-flow: column;
+  justify-content: start;
+
+}
+
+.submenu-item-icon:hover {
+  border-style: solid;
+  border-color: steelblue;
+  border-width: 1px;
+  cursor: pointer;
+
+}
+
+/* .submenu-item-icon:focus {
+  border-style: solid;
+  border-color: steelblue;
+  border-width: 3px;
+  cursor: pointer;
+
+} */
